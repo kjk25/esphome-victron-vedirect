@@ -272,8 +272,8 @@ class TYPE(MockEnum):
     BAT_TEMPERATURE = enum.auto()
     DC_MONITOR_MODE = enum.auto()
     ALARM_BUZZER = enum.auto()
-	BAT_MAX_CUR_SET = enum.auto()
-	
+    BAT_MAX_CUR_SET = enum.auto()
+    
     @cached_property
     def ns(self):
         return REG_DEF_struct.enum("TYPE", is_class=True)
@@ -467,5 +467,5 @@ REG_DEFS = {
         "BMV71", CLASS.NUMERIC, 0xEEB8, ACCESS.READ_ONLY
     ),
     TYPE.ALARM_BUZZER.name: REG_DEF("BMV", CLASS.BOOLEAN, 0xEEFC, ACCESS.READ_WRITE),
-	TYPE.BAT_MAX_CUR_SET.name: REG_DEF("ANY", CLASS.NUMERIC, 0xEDF0, ACCESS.READ_WRITE),
+    TYPE.BAT_MAX_CUR_SET.name: REG_DEF("ANY", CLASS.NUMERIC, 0xEDF0, ACCESS.READ_WRITE),
 }
