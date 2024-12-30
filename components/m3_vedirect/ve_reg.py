@@ -273,6 +273,7 @@ class TYPE(MockEnum):
     DC_MONITOR_MODE = enum.auto()
     ALARM_BUZZER = enum.auto()
     BAT_MAX_CUR_SET = enum.auto()
+    BAT_MAX_CUR_SET_TMP = enum.auto()
     
     @cached_property
     def ns(self):
@@ -468,4 +469,5 @@ REG_DEFS = {
     ),
     TYPE.ALARM_BUZZER.name: REG_DEF("BMV", CLASS.BOOLEAN, 0xEEFC, ACCESS.READ_WRITE),
     TYPE.BAT_MAX_CUR_SET.name: REG_DEF("ANY", CLASS.NUMERIC, 0xEDF0, ACCESS.READ_WRITE),
+    TYPE.BAT_MAX_CUR_SET_TMP.name: REG_DEF("ANY", CLASS.NUMERIC, 0x2015, ACCESS.READ_WRITE),
 }
